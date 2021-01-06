@@ -18,8 +18,6 @@ export class AppComponent {
       if (!user) return;
       userService.save(user);
 
-      //wadada
-
       let returnUrl = localStorage.getItem("returnUrl");
       if (!returnUrl) return;
       router.navigateByUrl(returnUrl);

@@ -1,3 +1,4 @@
+import { ShoppingCartService } from "./shopping-cart.service";
 import { ProductService } from "./product.service";
 import { CategoryService } from "./category.service";
 import { AdminAuthGuard } from "./admin-auth-guard.service";
@@ -29,8 +30,9 @@ import { AdminOrdersComponent } from "./admin/admin-orders/admin-orders.componen
 import { LoginComponent } from "./login/login.component";
 import { ProductFormComponent } from "./admin/product-form/product-form.component";
 import { from } from "rxjs/observable/from";
-import { ProductCardComponent } from './product-card/product-card.component';
-import { ProductFilterComponent } from './products/product-filter/product-filter.component';
+import { ProductCardComponent } from "./product-card/product-card.component";
+import { ProductFilterComponent } from "./products/product-filter/product-filter.component";
+import { ProductQuantityComponent } from './product-quantity/product-quantity.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +50,7 @@ import { ProductFilterComponent } from './products/product-filter/product-filter
     ProductFormComponent,
     ProductCardComponent,
     ProductFilterComponent,
+    ProductQuantityComponent,
   ],
   imports: [
     BrowserModule,
@@ -108,6 +111,7 @@ import { ProductFilterComponent } from './products/product-filter/product-filter
     UserService,
     CategoryService,
     ProductService,
+    ShoppingCartService,
   ],
   bootstrap: [AppComponent],
 })

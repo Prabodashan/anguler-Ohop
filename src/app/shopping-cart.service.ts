@@ -28,8 +28,8 @@ export class ShoppingCartService {
     this.updateItem(product, -1);
   }
 
-  clearCart() {
-    let cartId = this.getOrCreateCartId();
+  async clearCart() {
+    let cartId = await this.getOrCreateCartId();
     this.db.object("/shopping-carts/" + cartId + "/items").remove();
   }
 
